@@ -1,5 +1,7 @@
 package com.ovr;
 
+import com.ovr.block.BlockInit;
+import com.ovr.itemgroups.ItemGroupInit;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,5 +14,7 @@ public class OVRMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		ItemGroupInit.registerGroups();
+		BlockInit.registerBlocks();
 	}
 }
